@@ -1,0 +1,115 @@
+{
+  "liblabVersion": "2.0.16",
+  "date": "2024-03-03T19:37:15.470Z",
+  "config": {
+    "usesFormData": false,
+    "authentication": {
+      "access": {
+        "prefix": "Bearer"
+      }
+    },
+    "environmentVariables": [],
+    "fileOutput": "/tmp",
+    "inferServiceNames": false,
+    "httpLibrary": {
+      "name": "axios",
+      "packages": {
+        "axios": "^1.6.7"
+      },
+      "languages": ["typescript"]
+    },
+    "auth": ["bearer"],
+    "sdkName": "test-sdk",
+    "sdkVersion": "1.0.0",
+    "retry": {
+      "enabled": true,
+      "maxAttempts": 3,
+      "retryDelay": 150
+    },
+    "multiTenant": true,
+    "customQueries": {
+      "paths": [],
+      "rawQueries": [],
+      "queriesData": []
+    },
+    "generateEnv": true,
+    "injectedModels": [],
+    "license": {
+      "type": "MIT"
+    },
+    "deliveryMethod": "zip",
+    "language": "go",
+    "apiId": 222,
+    "liblabVersion": "2",
+    "deliveryMethods": ["zip"],
+    "languages": ["go"],
+    "apiName": "test-api",
+    "apiVersion": "1.0.0",
+    "createDocs": false,
+    "languageOptions": {
+      "python": {
+        "alwaysInitializeOptionals": false,
+        "pypiPackageName": "",
+        "githubRepoName": "",
+        "ignoreFiles": [],
+        "sdkVersion": "1.0.0"
+      },
+      "typescript": {
+        "bundle": false,
+        "exportClassDefault": false,
+        "httpClient": "axios",
+        "npmName": "",
+        "npmOrg": "",
+        "githubRepoName": "",
+        "ignoreFiles": [],
+        "sdkVersion": "1.0.0"
+      }
+    },
+    "publishing": {
+      "githubOrg": ""
+    },
+    "specFilePath": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/petstore.json",
+    "devContainer": false,
+    "responseHeaders": false,
+    "specUrl": "https://dev-liblab-api-stack-specs.s3.us-east-1.amazonaws.com/222/open-api-spec.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3C2RXH7MWUCMN7ON%2F20240303%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240303T193711Z&X-Amz-Expires=43200&X-Amz-Signature=8da34bb887a972a7a8a85940091e882c1fa22b24d8192612db8f0b7d0d50d9bd&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "goModuleName": "github.com/go-sdk",
+    "hooks": {
+      "enabled": false,
+      "sourceDir": ""
+    }
+  },
+  "files": [
+    "pkg/testsdk/testsdk.go",
+    "go.mod",
+    "internal/clients/rest/client.go",
+    "internal/utils/utils.go",
+    "internal/clients/rest/httptransport/request.go",
+    "internal/clients/rest/httptransport/response.go",
+    "internal/clients/rest/httptransport/error_response.go",
+    "internal/clients/rest/handlers/handler_chain.go",
+    "cmd/examples/example.go",
+    "internal/clients/rest/handlers/terminating_handler.go",
+    "internal/clients/rest/handlers/hook_handler.go",
+    "internal/clients/rest/handlers/bearer_token_handler.go",
+    "pkg/pets/request_params.go",
+    "internal/clients/rest/hooks/hook.go",
+    "internal/clients/rest/hooks/default_hook.go",
+    "internal/clients/rest/handlers/default_headers_handler.go",
+    "internal/clients/rest/handlers/retry_handler.go",
+    "internal/clients/rest/handlers/request_validation_handler.go",
+    "internal/validation/validation.go",
+    "internal/validation/validate_required.go",
+    "internal/unmarshal/to_array.go",
+    "internal/unmarshal/to_complex_object.go",
+    "internal/unmarshal/to_object.go",
+    "internal/unmarshal/to_primitive.go",
+    "internal/marshal/from_complex_object.go",
+    ".gitignore",
+    "pkg/testsdkconfig/config.go",
+    "internal/configmanager/config_manager.go",
+    "pkg/shared/test_sdk_response.go",
+    "pkg/pets/pets_service.go",
+    "pkg/pets/pet.go",
+    "README.md"
+  ]
+}
