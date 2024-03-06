@@ -1,0 +1,116 @@
+{
+  "liblabVersion": "2.0.17",
+  "date": "2024-03-03T19:37:15.257Z",
+  "config": {
+    "httpClient": "axios",
+    "usesFormData": false,
+    "authentication": {
+      "access": {
+        "prefix": "Bearer"
+      }
+    },
+    "environmentVariables": [],
+    "fileOutput": "/tmp",
+    "inferServiceNames": false,
+    "httpLibrary": {
+      "name": "axios",
+      "packages": {
+        "axios": "^1.6.7"
+      },
+      "languages": ["typescript"]
+    },
+    "auth": ["bearer"],
+    "sdkName": "test-sdk",
+    "sdkVersion": "1.0.0",
+    "retry": {
+      "enabled": true,
+      "maxAttempts": 3,
+      "retryDelay": 150
+    },
+    "multiTenant": true,
+    "customQueries": {
+      "paths": [],
+      "rawQueries": [],
+      "queriesData": []
+    },
+    "generateEnv": true,
+    "injectedModels": [],
+    "license": {
+      "type": "MIT"
+    },
+    "ignoreFiles": [],
+    "deliveryMethod": "zip",
+    "apiId": 222,
+    "liblabVersion": "2",
+    "deliveryMethods": ["zip"],
+    "languages": ["typescript"],
+    "apiName": "test-api",
+    "apiVersion": "1.0.0",
+    "createDocs": false,
+    "languageOptions": {
+      "python": {
+        "alwaysInitializeOptionals": false,
+        "pypiPackageName": "",
+        "githubRepoName": "",
+        "ignoreFiles": [],
+        "sdkVersion": "1.0.0"
+      },
+      "typescript": {
+        "bundle": false,
+        "exportClassDefault": false,
+        "httpClient": "axios",
+        "npmName": "",
+        "npmOrg": "",
+        "githubRepoName": "",
+        "ignoreFiles": [],
+        "sdkVersion": "1.0.0"
+      }
+    },
+    "publishing": {
+      "githubOrg": ""
+    },
+    "specFilePath": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/petstore.json",
+    "devContainer": false,
+    "responseHeaders": false,
+    "specUrl": "https://dev-liblab-api-stack-specs.s3.us-east-1.amazonaws.com/222/open-api-spec.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3C2RXH7MWUCMN7ON%2F20240303%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240303T193711Z&X-Amz-Expires=43200&X-Amz-Signature=8da34bb887a972a7a8a85940091e882c1fa22b24d8192612db8f0b7d0d50d9bd&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "language": "typescript",
+    "hooks": {
+      "enabled": false,
+      "sourceDir": ""
+    },
+    "bundle": false,
+    "exportClassDefault": false,
+    "npmName": "",
+    "npmOrg": "",
+    "githubRepoName": "",
+    "typescriptVersion": "5.3.3",
+    "zodVersion": "3.0.0",
+    "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "lib": ["es2015"]
+    }
+  },
+  "files": [
+    "package.json",
+    "tsconfig.json",
+    "src/http/client.ts",
+    "src/http/serializer.ts",
+    ".gitignore",
+    "src/services/base-service.ts",
+    "src/index.ts",
+    "src/http/index.ts",
+    "src/services/pets/models/index.ts",
+    "src/services/pets/index.ts",
+    "src/http/handlers/handler-chain.ts",
+    "src/http/types.ts",
+    "src/http/error.ts",
+    "src/http/handlers/terminating-handler.ts",
+    "src/http/handlers/hook-handler.ts",
+    "src/http/hooks/custom-hook.ts",
+    "src/http/hooks/hook.ts",
+    "src/services/pets/models/pet.ts",
+    "src/services/pets/pets.ts",
+    "README.md"
+  ]
+}
