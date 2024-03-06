@@ -1,6 +1,6 @@
 {
-  "liblabVersion": "2.0.16",
-  "date": "2024-03-03T19:37:15.257Z",
+  "liblabVersion": "2.0.17",
+  "date": "2024-03-06T21:52:47.233Z",
   "config": {
     "httpClient": "axios",
     "usesFormData": false,
@@ -48,9 +48,12 @@
     "apiVersion": "1.0.0",
     "createDocs": false,
     "languageOptions": {
+      "csharp": {
+        "githubRepoName": "csharp-sdk",
+        "sdkVersion": "1.0.0"
+      },
       "python": {
-        "alwaysInitializeOptionals": false,
-        "pypiPackageName": "",
+        "alwaysInitializeOptionals": true,
         "githubRepoName": "",
         "ignoreFiles": [],
         "sdkVersion": "1.0.0"
@@ -61,18 +64,19 @@
         "httpClient": "axios",
         "npmName": "",
         "npmOrg": "",
-        "githubRepoName": "",
+        "githubRepoName": "typescript-sdk",
         "ignoreFiles": [],
         "sdkVersion": "1.0.0"
       }
     },
     "publishing": {
-      "githubOrg": ""
+      "githubOrg": "skosijer"
     },
     "specFilePath": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/petstore.json",
     "devContainer": false,
+    "includeOptionalSnippetParameters": true,
     "responseHeaders": false,
-    "specUrl": "https://dev-liblab-api-stack-specs.s3.us-east-1.amazonaws.com/222/open-api-spec.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3C2RXH7MWUCMN7ON%2F20240303%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240303T193711Z&X-Amz-Expires=43200&X-Amz-Signature=8da34bb887a972a7a8a85940091e882c1fa22b24d8192612db8f0b7d0d50d9bd&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "specUrl": "https://dev-liblab-api-stack-specs.s3.us-east-1.amazonaws.com/222/open-api-spec.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3C2RXH7MWUCMN7ON%2F20240306%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240306T215247Z&X-Amz-Expires=43200&X-Amz-Signature=75303b989a45b1c865d68c77711e17f4a9491dfe1de6e859386f27f6d8f3c602&X-Amz-SignedHeaders=host&x-id=GetObject",
     "language": "typescript",
     "hooks": {
       "enabled": false,
@@ -82,7 +86,7 @@
     "exportClassDefault": false,
     "npmName": "",
     "npmOrg": "",
-    "githubRepoName": "",
+    "githubRepoName": "typescript-sdk",
     "typescriptVersion": "5.3.3",
     "zodVersion": "3.0.0",
     "compilerOptions": {
