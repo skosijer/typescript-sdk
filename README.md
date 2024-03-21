@@ -1,9 +1,9 @@
-# TestSdk Typescript SDK 1.0.0
+# TestSdk Typescript SDK 1.0.1
 
 A Typescript SDK for TestSdk.
 
 - API version: 1.0.0
-- SDK version: 1.0.0
+- SDK version: 1.0.1
 
 ## Table of Contents
 
