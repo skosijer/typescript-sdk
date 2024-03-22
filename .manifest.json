@@ -1,6 +1,6 @@
 {
   "liblabVersion": "2.0.20",
-  "date": "2024-03-22T18:18:40.107Z",
+  "date": "2024-03-22T19:00:37.292Z",
   "config": {
     "httpClient": "axios",
     "usesFormData": false,
@@ -73,7 +73,7 @@
     "includeOptionalSnippetParameters": true,
     "devContainer": false,
     "responseHeaders": false,
-    "specUrl": "https://dev-liblab-api-stack-specs.s3.us-east-1.amazonaws.com/222/open-api-spec.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3C2RXH7MWUCMN7ON%2F20240322%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240322T181839Z&X-Amz-Expires=43200&X-Amz-Signature=b803d7173a9056cde315a6a35e6c4d0ea5361e4b03acdb85756871a137df9b51&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "specUrl": "https://dev-liblab-api-stack-specs.s3.us-east-1.amazonaws.com/222/open-api-spec.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3C2RXH7MWUCMN7ON%2F20240322%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240322T190033Z&X-Amz-Expires=43200&X-Amz-Signature=c513ccc280b5e89e8621252143c0f7a8f826c4647f33bb71bd6a69384cad6e8b&X-Amz-SignedHeaders=host&x-id=GetObject",
     "language": "typescript",
     "hooks": {
       "enabled": false,
