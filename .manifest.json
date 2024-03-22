@@ -1,5 +1,5 @@
 {
-  "liblabVersion": "2.0.16",
+  "liblabVersion": "1.0.16",
   "date": "2024-03-03T19:37:15.257Z",
   "config": {
     "httpClient": "axios",
