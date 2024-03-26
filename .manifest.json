@@ -1,6 +1,6 @@
 {
-  "liblabVersion": "2.0.20",
-  "date": "2024-03-22T20:50:59.104Z",
+  "liblabVersion": "2.0.22",
+  "date": "2024-03-26T11:16:16.172Z",
   "config": {
     "httpClient": "axios",
     "usesFormData": false,
@@ -21,7 +21,7 @@
     },
     "auth": ["bearer"],
     "sdkName": "test-sdk",
-    "sdkVersion": "4.0.1",
+    "sdkVersion": "4.0.2",
     "retry": {
       "enabled": true,
       "maxAttempts": 3,
@@ -35,11 +35,12 @@
     },
     "generateEnv": true,
     "injectedModels": [],
-    "includeWatermark": false,
+    "includeWatermark": true,
     "license": {
       "type": "MIT"
     },
     "ignoreFiles": [],
+    "devContainer": false,
     "deliveryMethod": "zip",
     "apiId": 222,
     "liblabVersion": "2",
@@ -63,17 +64,15 @@
         "npmOrg": "",
         "githubRepoName": "typescript-sdk",
         "ignoreFiles": [],
-        "liblabVersion": "2",
-        "sdkVersion": "4.0.1"
+        "sdkVersion": "4.0.2"
       }
     },
     "publishing": {
       "githubOrg": "skosijer"
     },
     "includeOptionalSnippetParameters": true,
-    "devContainer": false,
     "responseHeaders": false,
-    "specUrl": "https://dev-liblab-api-stack-specs.s3.us-east-1.amazonaws.com/222/open-api-spec.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3C2RXH7MWUCMN7ON%2F20240322%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240322T205055Z&X-Amz-Expires=43200&X-Amz-Signature=064c88029ccbb57c952cba7a0772c32dbd2cbfc897049e3073238b428f1249e2&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "specUrl": "https://dev-liblab-api-stack-specs.s3.us-east-1.amazonaws.com/222/open-api-spec.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3C2RXH7MWUCMN7ON%2F20240326%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240326T111615Z&X-Amz-Expires=43200&X-Amz-Signature=c142e0da40f9f72f450d502032b8f57c17c27f2a345940d8854090350a95f097&X-Amz-SignedHeaders=host&x-id=GetObject",
     "language": "typescript",
     "hooks": {
       "enabled": false,
