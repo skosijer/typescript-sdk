@@ -1,47 +1,10 @@
 {
-  "liblabVersion": "2.0.20",
-  "date": "2024-03-22T20:50:59.104Z",
+  "liblabVersion": "2.0.22",
+  "date": "2024-03-26T16:43:47.571Z",
   "config": {
-    "httpClient": "axios",
-    "usesFormData": false,
-    "authentication": {
-      "access": {
-        "prefix": "Bearer"
-      }
-    },
-    "environmentVariables": [],
-    "fileOutput": "/tmp",
-    "inferServiceNames": false,
-    "httpLibrary": {
-      "name": "axios",
-      "packages": {
-        "axios": "^1.6.8"
-      },
-      "languages": ["typescript"]
-    },
-    "auth": ["bearer"],
-    "sdkName": "test-sdk",
-    "sdkVersion": "4.0.1",
-    "retry": {
-      "enabled": true,
-      "maxAttempts": 3,
-      "retryDelay": 150
-    },
-    "multiTenant": true,
-    "customQueries": {
-      "paths": [],
-      "rawQueries": [],
-      "queriesData": []
-    },
-    "generateEnv": true,
-    "injectedModels": [],
-    "includeWatermark": false,
-    "license": {
-      "type": "MIT"
-    },
-    "ignoreFiles": [],
-    "deliveryMethod": "zip",
     "apiId": 222,
+    "sdkName": "test-sdk",
+    "sdkVersion": "4.0.2",
     "liblabVersion": "2",
     "deliveryMethods": ["zip"],
     "languages": ["typescript"],
@@ -49,6 +12,7 @@
     "apiName": "test-api",
     "specFilePath": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/petstore.json",
     "createDocs": false,
+    "auth": ["bearer"],
     "languageOptions": {
       "csharp": {
         "githubRepoName": "csharp-sdk",
@@ -63,33 +27,76 @@
         "npmOrg": "",
         "githubRepoName": "typescript-sdk",
         "ignoreFiles": [],
-        "liblabVersion": "2",
-        "sdkVersion": "4.0.1"
+        "sdkVersion": "4.0.2"
       }
     },
     "publishing": {
       "githubOrg": "skosijer"
     },
     "includeOptionalSnippetParameters": true,
+    "authentication": {
+      "access": {
+        "prefix": "Bearer"
+      }
+    },
     "devContainer": false,
+    "generateEnv": true,
+    "inferServiceNames": false,
+    "injectedModels": [],
+    "license": {
+      "type": "MIT",
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "path": "MIT.ejs"
+    },
     "responseHeaders": false,
-    "specUrl": "https://dev-liblab-api-stack-specs.s3.us-east-1.amazonaws.com/222/open-api-spec.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3C2RXH7MWUCMN7ON%2F20240322%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240322T205055Z&X-Amz-Expires=43200&X-Amz-Signature=064c88029ccbb57c952cba7a0772c32dbd2cbfc897049e3073238b428f1249e2&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "retry": {
+      "enabled": true,
+      "maxAttempts": 3,
+      "retryDelay": 150,
+      "maxDelay": 5000,
+      "retryDelayJitter": 50,
+      "backOffFactor": 2,
+      "httpCodesToRetry": [408, 429, 500, 502, 503, 504],
+      "httpMethodsToRetry": ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"]
+    },
+    "multiTenant": true,
+    "specUrl": "https://dev-liblab-api-stack-specs.s3.us-east-1.amazonaws.com/222/open-api-spec.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3C2RXH7MWUCMN7ON%2F20240326%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240326T164339Z&X-Amz-Expires=43200&X-Amz-Signature=b608e44b76e4c494c5d2dcd6a92e9cc1f9862a219bd0c68df51cc5961d73c021&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "includeWatermark": true,
     "language": "typescript",
+    "deliveryMethod": "zip",
     "hooks": {
       "enabled": false,
       "sourceDir": ""
     },
     "bundle": false,
     "exportClassDefault": false,
+    "httpClient": "axios",
     "npmName": "",
     "npmOrg": "",
     "githubRepoName": "typescript-sdk",
+    "ignoreFiles": [],
     "typescriptVersion": "5.3.3",
     "zodVersion": "3.0.0",
     "compilerOptions": {
       "target": "es5",
       "module": "commonjs",
       "lib": ["es2015"]
+    },
+    "usesFormData": false,
+    "environmentVariables": [],
+    "fileOutput": "/tmp",
+    "httpLibrary": {
+      "name": "axios",
+      "packages": {
+        "axios": "^1.6.8"
+      },
+      "languages": ["typescript"]
+    },
+    "customQueries": {
+      "paths": [],
+      "rawQueries": [],
+      "queriesData": []
     }
   },
   "files": [
