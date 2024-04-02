@@ -23,7 +23,7 @@ export class PetsService extends BaseService {
   async createPets(body: Pet, requestConfig?: RequestConfig): Promise<HttpResponse<undefined>> {
     const path = '/pets';
     const options = {
-      responseSchema: undefined,
+      responseSchema: z.undefined(),
       body: JSON.stringify(petRequest.parse(body)),
       retry: requestConfig?.retry,
     };
