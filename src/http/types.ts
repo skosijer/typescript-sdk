@@ -51,7 +51,8 @@ export interface RequestConfig {
   retry?: RetryOptions;
 }
 
-export interface AuthOptions {
-  username: string;
-  password?: string;
+interface BearerAuth {
+  token: string;
 }
+
+export type AuthOptions = BearerAuth;
