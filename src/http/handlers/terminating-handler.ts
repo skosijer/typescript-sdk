@@ -23,7 +23,7 @@ export class TerminatingHandler implements RequestHandler {
 
   private getHeaders(response: Response): Record<string, string> {
     const headers: Record<string, string> = {};
-    response.headers.forEach((value, key) => {
+    response.headers.forEach((value: string, key: string) => {
       headers[key] = value;
     });
 
