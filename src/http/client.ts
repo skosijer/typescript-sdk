@@ -16,7 +16,7 @@ export class HttpClient {
   private readonly requestHandlerChain = new RequestHandlerChain();
 
   constructor(
-    private sdkConfig: SdkConfig,
+    private config: SdkConfig,
     hook = new CustomHook(),
   ) {
     this.requestHandlerChain.addHandler(new ResponseHandler());
@@ -66,11 +66,11 @@ export class HttpClient {
   }
 
   setBaseUrl(url: string): void {
-    this.sdkConfig.baseUrl = url;
+    this.config.baseUrl = url;
   }
 
-  setSdkConfig(sdkConfig: SdkConfig): void {
-    this.sdkConfig = sdkConfig;
+  setConfig(config: SdkConfig): void {
+    this.config = config;
   }
 
   private async performRequest<T>(request: HttpRequest<T>): Promise<HttpResponse<T>> {
@@ -82,7 +82,7 @@ export class HttpClient {
     return {
       method,
       url,
-      auth: this.sdkConfig.auth,
+      auth: this.config.auth,
       ...options,
     };
   }
@@ -90,6 +90,6 @@ export class HttpClient {
   private constructUrl<T>(url: string, options?: Options<T>): string {
     const queryParameters = serializeQuery(options?.queryParams);
 
-    return `${this.sdkConfig.baseUrl}${url}${queryParameters}`;
+    return `${this.config.baseUrl}${url}${queryParameters}`;
   }
 }

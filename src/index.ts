@@ -6,8 +6,8 @@ import { PetsService } from './services/pets';
 
 export class TestSdk {
   constructor(
-    sdkConfig: SdkConfig,
-    public readonly pets: PetsService = new PetsService(sdkConfig),
+    config: SdkConfig,
+    public readonly pets: PetsService = new PetsService(config),
   ) {}
 
   setBaseUrl(baseUrl: string): void {
@@ -18,8 +18,8 @@ export class TestSdk {
     this.setBaseUrl(environment);
   }
 
-  setSdkConfig(sdkConfig: SdkConfig): void {
-    this.pets.setSdkConfig(sdkConfig);
+  setConfig(config: SdkConfig): void {
+    this.pets.setConfig(config);
   }
 }
 
