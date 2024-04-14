@@ -42,16 +42,15 @@ export interface Options<T> {
   auth?: AuthOptions;
 }
 
-export interface RetryOptions {
-  attempts: number;
-  delayMs: number;
-}
-
 export interface RequestConfig {
   retry?: RetryOptions;
 }
 
+export interface RetryOptions {
+  attempts: number;
+  delayMs?: number;
+}
+
 export interface AuthOptions {
-  username: string;
-  password?: string;
+  token: string;
 }
