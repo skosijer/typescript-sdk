@@ -5,15 +5,15 @@ import { SdkConfig } from '../http/types';
 
 export class BaseService {
   constructor(
-    sdkConfig: SdkConfig,
-    public client: HttpClient = new HttpClient(sdkConfig),
+    config: SdkConfig,
+    public client: HttpClient = new HttpClient(config),
   ) {}
 
   setBaseUrl(baseUrl: string): void {
     this.client.setBaseUrl(baseUrl);
   }
 
-  setSdkConfig(sdkConfig: SdkConfig): void {
-    this.client.setSdkConfig(sdkConfig);
+  setConfig(config: SdkConfig): void {
+    this.client.setConfig(config);
   }
 }
