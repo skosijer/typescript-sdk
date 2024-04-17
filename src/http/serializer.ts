@@ -40,7 +40,7 @@ export function serializeQuery(
         } else {
           return `${key}=${value.map(encode).join(',')}`;
         }
-      } else if (typeof value === 'object' && value !== null) {
+      } else if (isNonNullObject(value)) {
         if (explode) {
           return Object.entries(value)
             .map(([k, v]) => `${k}=${encode(v)}`)
@@ -50,7 +50,7 @@ export function serializeQuery(
             .map(([k, v]) => `${k},${encode(v)}`)
             .join(',')}`;
         }
-      } else if (typeof value === 'boolean' || typeof value === 'number' || typeof value === 'string') {
+      } else if (isPrimitive(value)) {
         return `${key}=${encode(value)}`;
       }
       return '';
@@ -60,12 +60,40 @@ export function serializeQuery(
   return `?${query}`;
 }
 
+export function serializeHeader(headers?: Record<string, unknown>, explode = false): Record<string, string> {
+  if (!headers) {
+    return {};
+  }
+
+  return Object.entries(headers).reduce((acc, [key, value]) => {
+    if (Array.isArray(value)) {
+      return { ...acc, [key]: value.map(encode).join(',') };
+    }
+    if (isNonNullObject(value)) {
+      const serializedObject = Object.entries(value)
+        .map(([objectKey, objectValue]) => {
+          return explode
+            ? `${encode(objectKey)}=${encode(objectValue)}`
+            : `${encode(objectKey)},${encode(objectValue)}`;
+        })
+        .join(',');
+
+      return { ...acc, [key]: serializedObject };
+    }
+
+    if (isPrimitive(value)) {
+      return { ...acc, [key]: `${encode(value)}` };
+    }
+    return acc;
+  }, {});
+}
+
 function getPathReplaceValue<T>(value: T, key: string, style: SerializationStyle, explode: boolean): string {
   if (Array.isArray(value)) {
     return serializePathArray(value, key, style, explode);
   }
 
-  if (typeof value === 'object' && value !== null) {
+  if (isNonNullObject(value)) {
     return serializePathObject(value, key, style, explode);
   }
 
@@ -145,4 +173,12 @@ function getPathDelimiter(style: SerializationStyle, explode: boolean): string {
     return ';';
   }
   return ',';
+}
+
+function isPrimitive(value: unknown): value is string | number | boolean {
+  return typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean';
+}
+
+function isNonNullObject(value: unknown): value is object {
+  return typeof value === 'object' && value !== null;
 }
