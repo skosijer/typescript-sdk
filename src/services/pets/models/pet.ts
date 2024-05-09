@@ -11,6 +11,13 @@ export const pet = z.object({
   tag: z.string().optional(),
 });
 
+/**
+ *
+ * @typedef  {Pet} pet
+ * @property {number}
+ * @property {string}
+ * @property {string}
+ */
 export type Pet = z.infer<typeof pet>;
 
 /**
