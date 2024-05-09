@@ -7,7 +7,12 @@ import { RequestConfig } from '../../http/types';
 import { Pet, petRequest, petResponse } from './models';
 
 export class PetsService extends BaseService {
-  async listPets(limit: number, requestConfig?: RequestConfig): Promise<HttpResponse<Pet[]>> {
+  /**
+   *
+   * @param {number} [limit] - DESCRIPTION HERE
+   * @returns {Promise<HttpResponse<Pet[]>>} A paged array of pets
+   */
+  async listPets(limit?: number, requestConfig?: RequestConfig): Promise<HttpResponse<Pet[]>> {
     const path = '/pets';
     const options = {
       responseSchema: z.array(petResponse),
@@ -20,10 +25,14 @@ export class PetsService extends BaseService {
     return this.client.get(path, options);
   }
 
+  /**
+   *
+   * @returns {Promise<HttpResponse<any>>} Null response
+   */
   async createPets(body: Pet, requestConfig?: RequestConfig): Promise<HttpResponse<undefined>> {
     const path = '/pets';
     const options = {
-      responseSchema: undefined,
+      responseSchema: z.undefined(),
       body: JSON.stringify(petRequest.parse(body)),
       retry: requestConfig?.retry,
     };
@@ -31,6 +40,11 @@ export class PetsService extends BaseService {
     return this.client.post(path, options);
   }
 
+  /**
+   *
+   * @param {string} petId - DESCRIPTION HERE
+   * @returns {Promise<HttpResponse<Pet>>} Expected response to a valid request
+   */
   async showPetById(petId: string, requestConfig?: RequestConfig): Promise<HttpResponse<Pet>> {
     const path = this.client.buildPath('/pets/{petId}', { petId });
     const options = {
