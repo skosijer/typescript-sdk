@@ -13,6 +13,7 @@ export interface HttpRequest<T> extends Options<T> {
   method: HttpMethod;
   url: string;
   headers?: Record<string, string>;
+  retry: Required<RetryOptions>;
 }
 
 export interface HttpMetadata {
@@ -42,16 +43,15 @@ export interface Options<T> {
   auth?: AuthOptions;
 }
 
-export interface RetryOptions {
-  attempts: number;
-  delayMs: number;
-}
-
 export interface RequestConfig {
   retry?: RetryOptions;
 }
 
+export interface RetryOptions {
+  attempts: number;
+  delayMs?: number;
+}
+
 export interface AuthOptions {
-  username: string;
-  password?: string;
+  token: string;
 }

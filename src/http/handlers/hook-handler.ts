@@ -14,7 +14,7 @@ export class HookHandler implements RequestHandler {
       throw new Error('No next handler set in hook handler.');
     }
 
-    const nextRequest = { ...this.hook.beforeRequest(request), responseSchema: request.responseSchema };
+    const nextRequest = { ...request, ...this.hook.beforeRequest(request), responseSchema: request.responseSchema };
 
     const response = await this.next.handle(nextRequest);
 
